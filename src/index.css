@@ -18,7 +18,7 @@
     }
     
     .btn {
-        @apply px-4 py-2 text-white rounded-md shadow-sm shadow-black hover:rotate-2 hover:scale-105 transition duration-300 ease-in-out;
+        @apply px-4 py-2 text-sm flex flex-row items-center text-white rounded-md shadow-sm shadow-black hover:rotate-2 hover:scale-105 transition duration-300 ease-in-out;
     }
 
     

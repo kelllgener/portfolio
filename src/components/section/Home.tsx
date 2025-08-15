@@ -60,7 +60,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="h-full container m-auto min-h-[900px] flex justify-center items-center">
+    <section id="home" className="h-full container m-auto min-h-[800px] flex justify-center items-center">
       <RevealOnScroll>
         <div className="flex flex-col-reverse md:flex-row justify-around items-center p-4">
           <div className="flex-1/2">
@@ -71,7 +71,7 @@ const Home = () => {
               </span>
             </h3>
 
-            <div className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold lg:leading-12 xl:leading-17">
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight lg:leading-16 font-bold">
               <h1 className="text-black dark:text-white">
                 {line1}
                 {index < text1.length && step === 1 ? "|" : ""}
@@ -86,11 +86,11 @@ const Home = () => {
               </h1>
             </div>
 
-            <p className="text-lg text-gray-700 font-normal leading-normal md:text-lg lg:text-2xl lg:leading-8 mt-2 dark:text-gray-300">
+            <h4 className="text-base leading-7 md:text-lg md:leading-8 text-gray-700 font-normal mt-2 dark:text-gray-300">
               A Computer Science graduate with a strong background in software
               development. I am eager to learn and apply my skills in a
               collaborative environment to build scalable applications.
-            </p>
+            </h4>
 
             <div className="flex items-center justify-left gap-4 mt-4">
               <a href="#contact-me" className="btn bg-teal-800 flex flex-row">

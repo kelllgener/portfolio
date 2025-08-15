@@ -52,10 +52,10 @@ const AboutMe = () => {
             />
           </div>
           <div className="flex-1/2 p-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium lg:leading-14 text-black dark:text-white">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium lg:leading-14 text-black dark:text-white">
               Create innovations that transform the world.
             </h1>
-            <p className="text-md md:text-lg font-light lg:text-xl mt-4 text-gray-700 lg:leading-6 dark:text-gray-300">
+            <p className="text-base leading-7 md:text-lg md:leading-8 mt-4 text-gray-700 lg:leading-6 dark:text-gray-300">
               I’m Michael Adrian V. Gener, a recent Computer Science graduate
               from City College of Calamba, aspiring to be a Web Developer or
               Software Engineer. I build responsive, functional web applications
@@ -65,11 +65,11 @@ const AboutMe = () => {
               full-time opportunities.
             </p>
             <div className="">
-              <h3 className="text-black text-xl font-normal mt-5 dark:text-white">
-                What Makes Me Going
+              <h3 className="text-lg md:text-xl font-medium mt-5 text-black dark:text-white">
+                What Keeps Me Going
               </h3>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-6">
                 <KeepsMeGoing
                   Icon={CodeBracketIcon}
                   title="Clean Code"
@@ -93,7 +93,7 @@ const AboutMe = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap font-medium items-center gap-2 mt-8 text-xs text-black dark:text-white">
+            <div className="flex flex-wrap font-medium items-center gap-2 mt-8 text-xs leading-5 text-black dark:text-white">
               {briefAbout.map((b, i) => (
                 <React.Fragment key={i}>
                   <div className="w-10 h-0.5 bg-gray-400/50 rounded"></div>

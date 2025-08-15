@@ -100,7 +100,7 @@ const Skills = () => {
 
           {/* Main Content */}
           <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap p-4 justify-center gap-8">
+            <div className="flex flex-wrap p-4 justify-center border xl:justify-start xl:pl-34 gap-8">
               {frontendSkills.map((skill, index) => (
                 <SkillCards
                   key={index}

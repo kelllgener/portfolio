@@ -13,10 +13,11 @@ const Projects = () => {
       title: "TODAMOON Application",
       description:
         "It’s a component of the Todamoon System that serves as the driver and passenger app for monitoring the terminal queue.",
-      demoLink: "",
+      demoLink: "https://youtu.be/Ei1PM42lxLY",
       repoLink: "https://github.com/kelllgener/todamoon-v2-mobile-app",
       techUsed: ["JAVA", "Firebase", "GitHub", "Android Studio"],
       yearDev: "2024",
+      skillFocus: "Fullstack"
     },
   ];
 
@@ -30,6 +31,7 @@ const Projects = () => {
       repoLink: "https://github.com/kelllgener/Portfolio_Website",
       techUsed: ["HTML", "CSS", "Bootsrap", "JavaScript", "Git", "GitHub"],
       yearDev: "2023",
+      skillFocus: "Frontend"
     },
   ];
 
@@ -43,6 +45,7 @@ const Projects = () => {
       repoLink: "https://github.com/kelllgener/enrollment-system",
       techUsed: ["HTML", "CSS", "Bootsrap", "JavaScript", "PHP"],
       yearDev: "2023",
+      skillFocus: "Fullstack"
     },
   ];
 
@@ -56,6 +59,7 @@ const Projects = () => {
       repoLink: "https://github.com/kelllgener/library-system",
       techUsed: ["JAVA", "MySQL"],
       yearDev: "2022",
+      skillFocus: "Backend"
     },
   ];
 

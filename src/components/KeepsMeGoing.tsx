@@ -15,8 +15,8 @@ const KeepsMeGoing = ({ title, Icon, description }: KeepsMeGoingProps) => {
         )}
       </div>
       <div className="flex flex-col justify-start items-start gap-1">
-        <h3 className="text-black font-semibold dark:text-white">{title}</h3>
-        <span className="text-gray-500 dark-text-gray-300">{description}</span>
+        <h3 className="text-base text-black font-semibold dark:text-white">{title}</h3>
+        <span className="text-base text-gray-500 dark-text-gray-300">{description}</span>
       </div>
     </div>
   );
