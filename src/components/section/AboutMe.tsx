@@ -8,11 +8,38 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import KeepsMeGoing from "../KeepsMeGoing";
+import SectionHeader from "../SectionHeader";
 
 const AboutMe = () => {
+  const aboutmeHeader = [
+    {
+      title: "ABOUT ME",
+      subTitle: "Get to Know Me",
+      introduction:
+        "An overview of my background, passions, and experiences, highlighting the journey that shaped me as a developer and problem-solver.",
+    },
+  ];
+
+  const briefAbout = [
+    "Tech Savy",
+    "Computer Science Fresh Graduate",
+    "Fluent in English and Filipino",
+  ];
+
   return (
-    <section id="about-me" className="h-full container m-auto min-h-[900px] flex justify-center items-center">
+    <section
+      id="about-me"
+      className="h-full container m-auto min-h-[900px] flex justify-center items-center"
+    >
       <RevealOnScroll>
+
+        {/* Header */}
+        {aboutmeHeader.map((content, index) => (
+          <SectionHeader key={index} {...content} />
+        ))}
+
+
+        {/* Main Content */}
         <div className="flex flex-col justify-center items-center gap-4 md:flex-row p-4 relative">
           <div className="flex-1/2 md:mt-0">
             <img
@@ -25,12 +52,6 @@ const AboutMe = () => {
             />
           </div>
           <div className="flex-1/2 p-4">
-            <div className="fixed top-0 left-4">
-              <h3 className=" text-lg font-medium mb-4 text-gray-800 dark:text-gray-300">
-                ABOUT ME
-              </h3>
-              <div className="w-30 h-0.5 bg-gray-400/50 left-3 top-8 rounded fixed"></div>
-            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium lg:leading-14 text-black dark:text-white">
               Create innovations that transform the world.
             </h1>
@@ -71,13 +92,16 @@ const AboutMe = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap font-medium items-center gap-2 mt-8 text-xs text-gray-700 dark:text-gray-300">
-              <div className="w-20 h-0.5 bg-gray-400/50 rounded"></div>
-              <p>Based in Philippines</p>
-              <div className="w-5 h-0.5 bg-gray-400/50 rounded"></div>
-              <p>College Fresh Graduate</p>
-              <div className="w-5 h-0.5 bg-gray-400/50 rounded"></div>
-              <p>Fluent in English and Filipino</p>
+
+            <div className="flex flex-wrap font-medium items-center gap-2 mt-8 text-xs text-black dark:text-white">
+              {briefAbout.map((b, i) => (
+                <React.Fragment key={i}>
+                  <div className="w-10 h-0.5 bg-gray-400/50 rounded"></div>
+                  <p className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">
+                    {b}
+                  </p>
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>
