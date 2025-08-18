@@ -7,28 +7,34 @@ import {
 import RevealOnScroll from "../RevealOnScroll";
 import profile from "../../assets/images/profile.jpg";
 import resume from "../../assets/Resume.pdf";
-
+import Modal from "../Modal";
 
 interface Props {
-  isLoaded: boolean;
+	isLoaded: boolean;
 }
 
-const Home = ( {isLoaded}: Props ) => {
-
+const Home = ({ isLoaded }: Props) => {
 	const [line1, setLine1] = useState("");
 	const [line2, setLine2] = useState("");
 	const [line3, setLine3] = useState("");
 	const [index, setIndex] = useState(0); // Track current char index
 	const [step, setStep] = useState(1); // Track which line we're typing
+	const [showModal, setShowModal] = useState(false);
 
 	const text1 = "Full Stack";
 	const text2 = "Developer &";
 	const text3 = "Mobile Development Enthusiast";
 
-	useEffect(() => {
+	const handleDownload = () => {
+		// Trigger modal after short delay to mimic "download complete"
+		setTimeout(() => {
+			setShowModal(true);
+		}, 800); // delay feels like it's "downloading"
+	};
 
-    if (!isLoaded) return;
-    
+	useEffect(() => {
+		if (!isLoaded) return;
+
 		let index = 0;
 		let step = 1; // 1 = typing first line, 2 = typing second, 3 = typing third
 
@@ -112,6 +118,7 @@ const Home = ( {isLoaded}: Props ) => {
 							<a
 								href={resume}
 								download="Resume.pdf"
+								onClick={handleDownload}
 								className="btn flex flex-row ring-1 text-black hover:text-white hover:bg-black/90 ring-black 
                           dark:text-white dark:hover:text-black dark:hover:bg-white dark:ring-white"
 							>
@@ -119,6 +126,8 @@ const Home = ( {isLoaded}: Props ) => {
 								<span>Resume</span>
 							</a>
 						</div>
+						{/* Downloading Modal */}
+						{showModal && (<Modal show={showModal} onClose={() => setShowModal(false)} />)}
 
 						<div className="flex items-center justify-left gap-10 mt-10 ">
 							<div className="text-center gap-2">
