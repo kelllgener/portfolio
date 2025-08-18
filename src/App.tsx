@@ -57,7 +57,7 @@ function App() {
             menuOpen ? "pointer-events-none blur-lg" : "pointer-events-auto"
           }   `}
       >
-        <Home />
+        <Home isLoaded={isLoaded} />
         <AboutMe />
         <Experience />
         <Skills />
