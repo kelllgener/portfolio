@@ -111,11 +111,11 @@ const Home = () => {
 
             <div className="flex items-center justify-left gap-10 mt-10 ">
               <div className="text-center gap-2">
-                <h2 className="text-2xl font-semibold text-black dark:text-white">1+</h2>
+                <h2 className="text-2xl sm:text-3xl md:4xl lg:5xl  font-semibold text-black dark:text-white">1+</h2>
                 <h3 className="text-xs font-medium text-gray-500 dark-text-gray-300">Years Experience</h3>
               </div>
               <div className="text-center gap-2">
-                <h2 className="text-2xl font-semibold text-black dark:text-white">5+</h2>
+                <h2 className="text-2xl sm:text-3xl md:4xl lg:5xl font-semibold text-black dark:text-white">5+</h2>
                 <h3 className="text-xs font-medium text-gray-500 dark-text-gray-300">Projects Completed</h3>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Home = () => {
               height={400}
               width={400}
               alt="my picture"
-              className="rounded-2xl shadow-lg shadow-black/60 hover:shadow-[10px_10px_20px_rgba(0,0,0,0.3)] hover:-rotate-8 hover:scale-105 transition ease-out
+              className="rounded-2xl shadow-lg shadow-black/60 hover:shadow-[10px_10px_20px_rgba(0,0,0,0.3)] hover:-rotate-5 hover:scale-105 transition ease-out
                dark:shadow-teal-800/60 dark:hover:shadow-[10px_10px_20px_rgba(45,212,191,0.6)]"
             />
           </div>

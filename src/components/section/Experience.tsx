@@ -65,9 +65,9 @@ const Experience = () => {
               ))}
             </div>
           </div>
-          <div className="flex items-center mx-4 self-start mt-6 text-sm text-gray-700 dark:text-gray-300">
+          <div className="flex items-center mx-4 self-start mt-6 text-xs md:text-sm animate-bounce text-gray-700 dark:text-gray-300">
             <div className="w-5 h-0.5 bg-gray-400/50 rounded"></div>
-            <div className="px-2 py-1">Ready to take another challenge</div>
+            <p className="px-2 py-1">Ready to take another challenge</p>
           </div>
         </div>
       </RevealOnScroll>

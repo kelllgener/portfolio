@@ -7,7 +7,6 @@ import {
   FolderOpenIcon,
   CodeBracketIcon,
   EnvelopeIcon,
-  PaperAirplaneIcon,
 } from "@heroicons/react/24/outline"; // Assuming you have these icons
 import DarkModeToggle from "./DarkModeToggle";
 
@@ -46,7 +45,7 @@ const MobileNavbar = ({ menuOpen, setOpenMenu }: Props) => {
 
   return (
     <div
-      className={`fixed top-0 right-0 p-4  bg-white z-20 flex flex-col transition-all duration-500 ease-in-out
+      className={`fixed top-0 right-0 p-4 bg-white z-20 flex flex-col transition-all duration-500 ease-in-out
                     dark:bg-black
                     ${
                       menuOpen

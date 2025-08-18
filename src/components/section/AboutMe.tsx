@@ -44,10 +44,8 @@ const AboutMe = () => {
           <div className="flex-1/2 md:mt-0">
             <img
               src={picture2}
-              height={300}
-              width={300}
               alt="my picture"
-              className="rounded-2xl shadow-lg mt-10 shadow-black/60 hover:shadow-[10px_10px_20px_rgba(0,0,0,0.3)] hover:rotate-8 hover:scale-105 transition ease-out
+              className="w-[300px] lg:w-[400px] object-cover rounded-2xl shadow-lg mt-10 shadow-black/60 hover:shadow-[10px_10px_20px_rgba(0,0,0,0.3)] hover:rotate-5 hover:scale-105 transition ease-out
                dark:shadow-teal-800/60 dark:hover:shadow-[10px_10px_20px_rgba(45,212,191,0.6)]"
             />
           </div>
@@ -55,7 +53,7 @@ const AboutMe = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium lg:leading-14 text-black dark:text-white">
               Create innovations that transform the world.
             </h1>
-            <p className="text-base leading-7 md:text-lg md:leading-8 mt-4 text-gray-700 lg:leading-6 dark:text-gray-300">
+            <p className="text-base leading-7 md:text-lg md:leading-8 mt-4 text-gray-700 dark:text-gray-300">
               I’m Michael Adrian V. Gener, a recent Computer Science graduate
               from City College of Calamba, aspiring to be a Web Developer or
               Software Engineer. I build responsive, functional web applications

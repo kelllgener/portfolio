@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
+import Header from "./components/section/Header";
 import Home from "./components/section/Home";
 import AboutMe from "./components/section/AboutMe";
 import Skills from "./components/section/Skills";
@@ -8,6 +8,7 @@ import Projects from "./components/section/Projects";
 import ContactMe from "./components/section/ContactMe";
 import LoadingScreen from "./components/LoadingScreen";
 import MobileNavbar from "./components/MobileNavbar";
+import Footer from "./components/section/Footer";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,6 +63,9 @@ function App() {
         <Skills />
         <Projects />
         <ContactMe />
+      </div>
+      <div className="border-t border-t-gray-300">
+        <Footer />
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import React, { act } from "react";
 
 interface Props {
   title: string;
