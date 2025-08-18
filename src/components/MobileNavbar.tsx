@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MobileNavLink from "./MobileNavLink";
 import {
   HomeIcon,
@@ -15,7 +15,7 @@ interface Props {
   setOpenMenu: (open: boolean) => void;
 }
 
-const MobileNavbar = ({ menuOpen, setOpenMenu }: Props) => {
+const MobileNavbar = ({ menuOpen }: Props) => {
   const [activeSection, setActiveSection] = useState("home");
   useEffect(() => {
     const handleScroll = () => {

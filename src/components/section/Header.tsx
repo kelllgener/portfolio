@@ -7,8 +7,7 @@ import {
 	FolderOpenIcon,
 	CodeBracketIcon,
 	EnvelopeIcon,
-	ChevronDoubleRightIcon,
-	ChevronDoubleLeftIcon
+	ChevronDoubleRightIcon
 } from "@heroicons/react/24/outline"; // Assuming you have these icons
 import DarkModeToggle from "../DarkModeToggle";
 
