@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       {/* Header */}
       <div className="container mx-auto">
         <Header menuOpen={menuOpen} setOpenMenu={setMenuOpen} />
