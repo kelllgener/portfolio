@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 
 interface Props {
 	show: boolean;
