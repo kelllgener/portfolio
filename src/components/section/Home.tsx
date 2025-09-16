@@ -115,7 +115,7 @@ const Home = ({ isLoaded }: Props) => {
 								<CursorArrowRaysIcon className="size-6" /> &nbsp;
 								<span>Hire Me</span>
 							</a>
-							<a
+							{/* <a
 								href={resume}
 								download="Resume.pdf"
 								onClick={handleDownload}
@@ -124,7 +124,7 @@ const Home = ({ isLoaded }: Props) => {
 							>
 								<ArrowDownTrayIcon className="size-6" /> &nbsp;
 								<span>Resume</span>
-							</a>
+							</a> */}
 						</div>
 						{/* Downloading Modal */}
 						{showModal && (<Modal show={showModal} onClose={() => setShowModal(false)} />)}
