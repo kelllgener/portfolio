@@ -9,32 +9,33 @@ import ContactMe from "./components/section/ContactMe";
 import LoadingScreen from "./components/LoadingScreen";
 import MobileNavbar from "./components/MobileNavbar";
 import Footer from "./components/section/Footer";
+import Alert from "./components/Alert";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [alertMessage, setAlertMessage] = useState("");
+
+  const showAlert = () => setAlertMessage("Resume downloaded!");
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      // Close the menu automatically if viewport is wide
       if (width > 640 && menuOpen) {
         setMenuOpen(false);
       }
     };
 
-    // Body scroll lock
     if (menuOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
 
-    // Run once on mount + whenever menuOpen changes
     handleResize();
 
-    // Add resize listener
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -57,7 +58,9 @@ function App() {
             menuOpen ? "pointer-events-none blur-lg" : "pointer-events-auto"
           }   `}
       >
-        <Home isLoaded={isLoaded} />
+        <Alert message={alertMessage} onClose={() => setAlertMessage("")} />
+
+        <Home isLoaded={isLoaded} showAlert={showAlert} />
         <AboutMe />
         <Experience />
         <Skills />
@@ -65,7 +68,7 @@ function App() {
         <ContactMe />
       </div>
       <div className="border-t border-t-gray-300">
-        <Footer />
+        <Footer showAlert={showAlert} />
       </div>
     </>
   );
