@@ -7,7 +7,7 @@ import {
   FolderOpenIcon,
   CodeBracketIcon,
   EnvelopeIcon,
-} from "@heroicons/react/24/outline"; // Assuming you have these icons
+} from "@heroicons/react/24/outline"; 
 import DarkModeToggle from "./DarkModeToggle";
 
 interface Props {

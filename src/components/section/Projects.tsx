@@ -7,8 +7,7 @@ import firstPortfolioUrl from "../../assets/images/first_web_portfolio.png";
 import todamoonAppUrl from "../../assets/images/todamoon_app.png";
 import todamoonWebUrl from "../../assets/images/todamoon_web.png";
 import todamoonScannerUrl from "../../assets/images/todamoon scanner.jpg";
-import { GitHubIcon } from "../icons/GitHubIcon";
-import TooltipButton from "../TooltipButton";
+import ContribCalendar from "../ContribCalendar";
 
 const Projects = () => {
 	const projectData = [
@@ -119,16 +118,7 @@ const Projects = () => {
 						))}
 					</div>
 					<div className="flex justify-center items-center mt-4">
-						<TooltipButton tooltip="Click to View my Repository">
-							<a
-								href="https://github.com/kelllgener"
-								target="_blank"
-								className="btn text-black dark:text-white"
-							>
-								<span>Project Repository</span> &nbsp;
-								<GitHubIcon className="h-5" />
-							</a>
-						</TooltipButton>
+						<ContribCalendar username="kelllgener" />
 					</div>
 				</div>
 			</RevealOnScroll>

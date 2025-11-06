@@ -24,7 +24,7 @@ const Home = ({ isLoaded, showAlert }: Props) => {
 
   const text1 = "Full Stack";
   const text2 = "Developer &";
-  const text3 = "Mobile Development Enthusiast";
+  const text3 = "System Development Enthusiast";
 
   useEffect(() => {
     if (!isLoaded) return;
