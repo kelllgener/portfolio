@@ -9,21 +9,21 @@ import {
 } from "@heroicons/react/24/outline";
 import KeepsMeGoing from "../KeepsMeGoing";
 import SectionHeader from "../SectionHeader";
+import { EN } from "../../locale/en";
 
 const AboutMe = () => {
   const aboutmeHeader = [
     {
-      title: "ABOUT ME",
-      subTitle: "Get to Know Me",
-      introduction:
-        "An overview of my background, passions, and experiences, highlighting the journey that shaped me as a developer and problem-solver.",
+      title: EN.ABOUT_TITLE,
+      subTitle: EN.ABOUT_SUB_TITLE,
+      introduction: EN.ABOUT_INTRODUCTION,
     },
   ];
 
   const briefAbout = [
-    "Tech Savy",
-    "Computer Science Fresh Graduate",
-    "Fluent in English and Filipino",
+    EN.ABOUT_BRIEF_WORD_1,
+    EN.ABOUT_BRIEF_WORD_2,
+    EN.ABOUT_BRIEF_WORD_3,
   ];
 
   return (
@@ -32,12 +32,10 @@ const AboutMe = () => {
       className="h-full container m-auto min-h-[900px] flex justify-center items-center"
     >
       <RevealOnScroll>
-
         {/* Header */}
         {aboutmeHeader.map((content, index) => (
           <SectionHeader key={index} {...content} />
         ))}
-
 
         {/* Main Content */}
         <div className="flex flex-col justify-center items-center gap-4 md:flex-row p-4 relative">
@@ -51,42 +49,36 @@ const AboutMe = () => {
           </div>
           <div className="flex-1/2 p-4">
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium lg:leading-14 text-black dark:text-white">
-              Create innovations that transform the world.
+              {EN.ABOUT_CONTENT_HEADER}
             </h1>
             <p className="text-base leading-7 md:text-lg md:leading-8 mt-4 text-gray-700 dark:text-gray-300">
-              I’m Michael Adrian V. Gener, a recent Computer Science graduate
-              from City College of Calamba, aspiring to be a Web Developer or
-              Software Engineer. I build responsive, functional web applications
-              using ReactJS, Tailwind CSS, PHP, and MySQL, with additional
-              experience in Java and Python. I’m committed to improving my
-              skills through project-based learning and open to freelancing or
-              full-time opportunities.
+              {EN.ABOUT_MAIN_CONTENT}
             </p>
             <div className="">
               <h3 className="text-lg md:text-xl font-medium mt-5 text-black dark:text-white">
-                What Keeps Me Going
+                {EN.ABOUT_SUB_CONTENT_HEADER}
               </h3>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-6">
                 <KeepsMeGoing
                   Icon={CodeBracketIcon}
-                  title="Clean Code"
-                  description="Writing maintainable, scalable solutions"
+                  title={EN.ABOUT_SUB_CONTENT_TITLE_1}
+                  description={EN.ABOUT_SUB_CONTENT_1}
                 />
                 <KeepsMeGoing
                   Icon={BugAntIcon}
-                  title="Problem Solver"
-                  description="Challenges are opportunities to grow"
+                  title={EN.ABOUT_SUB_CONTENT_TITLE_2}
+                  description={EN.ABOUT_SUB_CONTENT_2}
                 />
                 <KeepsMeGoing
                   Icon={AcademicCapIcon}
-                  title="Passionate Learner"
-                  description="Always free when it comes to learning new things"
+                  title={EN.ABOUT_SUB_CONTENT_TITLE_3}
+                  description={EN.ABOUT_SUB_CONTENT_3}
                 />
                 <KeepsMeGoing
                   Icon={LightBulbIcon}
-                  title="Innovation"
-                  description="New technologies and ideas to improve lives"
+                  title={EN.ABOUT_SUB_CONTENT_TITLE_4}
+                  description={EN.ABOUT_SUB_CONTENT_4}
                 />
               </div>
             </div>

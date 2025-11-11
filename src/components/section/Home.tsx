@@ -8,6 +8,7 @@ import RevealOnScroll from "../RevealOnScroll";
 import profile from "../../assets/images/profile.jpg";
 import resume from "../../assets/Gener_Micheal_Adrian_Resume.pdf";
 import Modal from "../Modal";
+import { EN } from "../../locale/en";
 
 interface Props {
   isLoaded: boolean;
@@ -22,9 +23,9 @@ const Home = ({ isLoaded, showAlert }: Props) => {
   const [step, setStep] = useState(1); // Track which line we're typing
   const [showModal, setShowModal] = useState(false);
 
-  const text1 = "Full Stack";
-  const text2 = "Developer &";
-  const text3 = "System Development Enthusiast";
+  const text1 = EN.TEXT_1;
+  const text2 = EN.TEXT_2;
+  const text3 = EN.TEXT_3;
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -79,7 +80,7 @@ const Home = ({ isLoaded, showAlert }: Props) => {
             <h3 className="flex flex-row gap-2 items-center mb-4">
               <span className="text-2xl text-green-500 animate-pulse">•</span>
               <span className="text-gray-700 text-sm dark:text-gray-300">
-                Currently Available for job opportunities.
+                {EN.CURRENT_STATUS}
               </span>
             </h3>
 
@@ -99,9 +100,7 @@ const Home = ({ isLoaded, showAlert }: Props) => {
             </div>
 
             <h4 className="text-base leading-7 md:text-lg md:leading-8 text-gray-700 font-normal mt-2 dark:text-gray-300">
-              A Computer Science graduate with a strong background in software
-              development. I am eager to learn and apply my skills in a
-              collaborative environment to build scalable applications.
+              {EN.HOME_TITLE}
             </h4>
 
             <div className="flex items-center justify-left gap-4 mt-4">
@@ -137,7 +136,7 @@ const Home = ({ isLoaded, showAlert }: Props) => {
               </div>
               <div className="text-center gap-2">
                 <h2 className="text-2xl sm:text-3xl md:4xl lg:5xl font-semibold text-black dark:text-white">
-                  5+
+                  7+
                 </h2>
                 <h3 className="text-xs font-medium text-gray-500 dark-text-gray-300">
                   Projects Completed

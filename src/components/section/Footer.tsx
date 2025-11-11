@@ -1,5 +1,6 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import resume from "../../assets/Gener_Micheal_Adrian_Resume.pdf";
+import { EN } from "../../locale/en";
 
 interface FooterProps {
   showAlert: () => void;
@@ -37,11 +38,10 @@ const Footer = ({ showAlert }: FooterProps) => {
     <div className="container mx-auto text-black dark:text-white flex flex-col gap-4 p-4 justify-center items-center">
       <div className="flex flex-col md:flex-row xl:pl-10 gap-4 md:gap-10 p-2 w-full">
         <div className="flex flex-col basis-1/3">
-          <h4 className="text-base md:text-lg font-semibold">Let's Connect</h4>
+          <h4 className="text-base md:text-lg font-semibold">{EN.FOOTER_TITLE}</h4>
           <div className="text-xs md:text-sm leading-5 md:leading-6 text-gray-700 dark:text-gray-300">
             <span className="">
-              Open to new opportunities that challenge me and help me grow
-              within the industry.
+              {EN.FOOTER_SUB_TITLE}
             </span>
           </div>
         </div>

@@ -5,10 +5,13 @@ interface Props {
 }
 
 const ContribCalendar: React.FC<Props> = ({ username }) => {
-  const url = `https://ghchart.rshah.org/0e4429//${username}`; 
+  const url = `https://ghchart.rshah.org/0e4429//${username}`;
 
   return (
-    <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-md">
+    <div
+      className="flex flex-col items-center bg-[var(--bg-light)] dark:bg-[var(--bg-dark)] transition duration-300 ease-in-out backdrop-blur-xl
+                  dark:text-white dark:shadow-teal-800/60 hover:scale-105 p-6 rounded-xl shadow-md"
+    >
       <h2 className="text-2xl font-bold mb-4">GitHub Contributions</h2>
       <img
         src={url}

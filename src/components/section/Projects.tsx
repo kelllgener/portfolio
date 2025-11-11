@@ -7,123 +7,118 @@ import firstPortfolioUrl from "../../assets/images/first_web_portfolio.png";
 import todamoonAppUrl from "../../assets/images/todamoon_app.png";
 import todamoonWebUrl from "../../assets/images/todamoon_web.png";
 import todamoonScannerUrl from "../../assets/images/todamoon scanner.jpg";
-import ContribCalendar from "../ContribCalendar";
+import { EN } from "../../locale/en";
+import TooltipButton from "../TooltipButton";
+import { GitHubIcon } from "../icons/GitHubIcon";
 
 const Projects = () => {
-	const projectData = [
-		{
-			projectUrl: todamoonScannerUrl,
-			title: "TODAMOON Scanner",
-			description:
-				"It serves as the core component of the system, functioning as a scanner that records driver entry and exit data.",
-			demoLink: "https://www.youtube.com/watch?v=qSW9CeEgu3M",
-			repoLink:
-				"https://github.com/kelllgener/todamoon-hardware-entrance-exit-code",
-			techUsed: ["ESP32-Cam", "C", "C++", "Python", "Arduino IDE", "Firebase"],
-			yearDev: "2024",
-			skillFocus: "Backend",
-		},
-		{
-			projectUrl: todamoonWebUrl,
-			title: "TODAMOON Admin Website",
-			description:
-				"It functions as the administrative hub of the Todamoon System, overseeing and managing its core operations.",
-			demoLink: "https://youtu.be/u78Zj7CP-vw?feature=shared",
-			repoLink: "https://github.com/kelllgener/todamoon-admin-website",
-			techUsed: [
-				"TypeScript",
-				"Node.js",
-				"Next.js",
-				"Firebase",
-				"GitHub",
-				"Tailwind CSS",
-				"DaisyUI",
-			],
-			yearDev: "2024",
-			skillFocus: "Fullstack",
-		},
-		{
-			projectUrl: todamoonAppUrl,
-			title: "TODAMOON Mobile Application",
-			description:
-				"It’s a component of the Todamoon System that serves as the driver and passenger app for monitoring the terminal queue.",
-			demoLink: "https://youtu.be/Ei1PM42lxLY",
-			repoLink: "https://github.com/kelllgener/todamoon-v2-mobile-app",
-			techUsed: ["Java", "Firebase", "GitHub", "Android Studio"],
-			yearDev: "2024",
-			skillFocus: "Fullstack",
-		},
-		{
-			projectUrl: firstPortfolioUrl,
-			title: "Web Portfolio",
-			description:
-				"A personal graphics design project created to further develop and enhance my creative skills.",
-			demoLink: "https://kelllgener.github.io/Portfolio_Website/",
-			repoLink: "https://github.com/kelllgener/Portfolio_Website",
-			techUsed: ["HTML", "CSS", "Bootstrap", "JavaScript", "GitHub"],
-			yearDev: "2023",
-			skillFocus: "Frontend",
-		},
-		{
-			projectUrl: enrollmentSystemUrl,
-			title: "Enrollment Management System",
-			description:
-				"A PHP-based system designed with CRUD functionality to optimize the client school’s operations.",
-			demoLink: "https://youtu.be/E5m_bgf4X2Y?feature=shared",
-			repoLink: "https://github.com/kelllgener/enrollment-system",
-			techUsed: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP"],
-			yearDev: "2023",
-			skillFocus: "Fullstack",
-		},
-		{
-			projectUrl: javaProjectUrl,
-			title: "Library Management System",
-			description:
-				"A Java-based library management system I developed in my second year of college to showcase CRUD functionality.",
-			demoLink: "https://youtu.be/Vp6biVHfZJc?feature=shared",
-			repoLink: "https://github.com/kelllgener/library-system",
-			techUsed: ["JAVA", "MySQL"],
-			yearDev: "2022",
-			skillFocus: "Backend",
-		},
-	];
+  const projectHeader = [
+    {
+      title: EN.PROJ_TITLE,
+      subTitle: EN.PROJ_SUB_TITLE,
+      introduction: EN.PROJ_INTRODUCTION,
+    },
+  ];
 
-	const projectHeader = [
-		{
-			title: "PROJECTS",
-			subTitle: "Things I've Built",
-			introduction:
-				"A showcase of projects that demonstrate my ability to design, develop, and deliver functional solutions using a variety of technologies.",
-		},
-	];
+  const projectData = [
+    {
+      projectUrl: todamoonScannerUrl,
+      title: EN.PROJ_TODAMOON_SCANNER.TITLE,
+      description: EN.PROJ_TODAMOON_SCANNER.DESCRIPTION,
+      demoLink: EN.PROJ_TODAMOON_SCANNER.DEMO_LINK,
+      repoLink: EN.PROJ_TODAMOON_SCANNER.REPO_LINK,
+      techUsed: EN.PROJ_TODAMOON_SCANNER.TECH_USED,
+      yearDev: EN.PROJ_TODAMOON_SCANNER.YEAR_DEV,
+      skillFocus: EN.PROJ_TODAMOON_SCANNER.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: todamoonWebUrl,
+      title: EN.PROJ_TODAMOON_WEBAPP.TITLE,
+      description: EN.PROJ_TODAMOON_WEBAPP.DESCRIPTION,
+      demoLink: EN.PROJ_TODAMOON_WEBAPP.DEMO_LINK,
+      repoLink: EN.PROJ_TODAMOON_WEBAPP.REPO_LINK,
+      techUsed: EN.PROJ_TODAMOON_WEBAPP.TECH_USED,
+      yearDev: EN.PROJ_TODAMOON_WEBAPP.YEAR_DEV,
+      skillFocus: EN.PROJ_TODAMOON_WEBAPP.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: todamoonAppUrl,
+      title: EN.PROJ_TODAMOON_MOBAPP.TITLE,
+      description: EN.PROJ_TODAMOON_MOBAPP.DESCRIPTION,
+      demoLink: EN.PROJ_TODAMOON_MOBAPP.DEMO_LINK,
+      repoLink: EN.PROJ_TODAMOON_MOBAPP.REPO_LINK,
+      techUsed: EN.PROJ_TODAMOON_MOBAPP.TECH_USED,
+      yearDev: EN.PROJ_TODAMOON_MOBAPP.YEAR_DEV,
+      skillFocus: EN.PROJ_TODAMOON_MOBAPP.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: firstPortfolioUrl,
+      title: EN.PROJ_WEB_PORT_1.TITLE,
+      description: EN.PROJ_WEB_PORT_1.DESCRIPTION,
+      demoLink: EN.PROJ_WEB_PORT_1.DEMO_LINK,
+      repoLink: EN.PROJ_WEB_PORT_1.REPO_LINK,
+      techUsed: EN.PROJ_WEB_PORT_1.TECH_USED,
+      yearDev: EN.PROJ_WEB_PORT_1.YEAR_DEV,
+      skillFocus: EN.PROJ_WEB_PORT_1.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: enrollmentSystemUrl,
+      title: EN.PROJ_EMS.TITLE,
+      description: EN.PROJ_EMS.DESCRIPTION,
+      demoLink: EN.PROJ_EMS.DEMO_LINK,
+      repoLink: EN.PROJ_EMS.REPO_LINK,
+      techUsed: EN.PROJ_EMS.TECH_USED,
+      yearDev: EN.PROJ_EMS.YEAR_DEV,
+      skillFocus: EN.PROJ_EMS.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: javaProjectUrl,
+      title: EN.PROJ_LMS.TITLE,
+      description: EN.PROJ_LMS.DESCRIPTION,
+      demoLink: EN.PROJ_LMS.DEMO_LINK,
+      repoLink: EN.PROJ_LMS.REPO_LINK,
+      techUsed: EN.PROJ_LMS.TECH_USED,
+      yearDev: EN.PROJ_LMS.YEAR_DEV,
+      skillFocus: EN.PROJ_LMS.SKILL_FOCUSED,
+    },
+  ];
 
-	return (
-		<section
-			id="projects"
-			className="container m-auto h-full min-h-[1000px] flex justify-center items-center"
-		>
-			<RevealOnScroll>
-				{/* Header */}
-				{projectHeader.map((content, index) => (
-					<SectionHeader key={index} {...content} />
-				))}
+  return (
+    <section
+      id="projects"
+      className="container m-auto h-full min-h-[1000px] flex justify-center items-center"
+    >
+      <RevealOnScroll>
+        {/* Header */}
+        {projectHeader.map((content, index) => (
+          <SectionHeader key={index} {...content} />
+        ))}
 
-				{/* Main Content */}
-				<div className="flex flex-col items-center gap-4">
-					<div className="flex flex-wrap p-4 justify-center gap-18">
-						{projectData.map((content, index) => (
-							<RevealOnScroll>
-								<ProjectCard key={index} {...content} />
-							</RevealOnScroll>
-						))}
-					</div>
-					<div className="flex justify-center items-center mt-4">
-						<ContribCalendar username="kelllgener" />
-					</div>
-				</div>
-			</RevealOnScroll>
-		</section>
-	);
+        {/* Main Content */}
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-wrap p-4 justify-center gap-18">
+            {projectData.map((content, index) => (
+              <RevealOnScroll>
+                <ProjectCard key={index} {...content} />
+              </RevealOnScroll>
+            ))}
+          </div>
+          <div className="flex justify-center items-center mt-4">
+            <TooltipButton tooltip="Click to View my Repository">
+              <a
+                href={EN.PROJ_GITHUB_LINK}
+                target="_blank"
+                className="btn text-black dark:text-white"
+              >
+                <span>GitHub Repository</span> &nbsp;
+                <GitHubIcon className="h-5" />
+              </a>
+            </TooltipButton>
+          </div>
+        </div>
+      </RevealOnScroll>
+    </section>
+  );
 };
 
 export default Projects;

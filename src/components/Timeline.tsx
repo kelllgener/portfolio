@@ -37,7 +37,7 @@ const Timeline = ({
       </div>
 
       {/* Card */}
-      <div className="flex flex-col gap-2 shadow-sm rounded-2xl p-4 bg-[var(--bg-light)] dark:bg-[var(--bg-dark)] 
+      <div className="flex flex-col gap-2 max-w-[1000px] shadow-sm rounded-2xl p-4 bg-[var(--bg-light)] dark:bg-[var(--bg-dark)] 
            backdrop-blur-xl sm:shadow-md sm:shadow-gray-500/60 dark:text-white dark:shadow-teal-800/60">
         <div className="flex flex-row gap-5 items-center">
           <h3 className="flex items-center gap-2 text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-300">
