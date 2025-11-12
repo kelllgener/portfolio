@@ -1,16 +1,15 @@
 import React from "react";
 import RevealOnScroll from "../RevealOnScroll";
 import SkillCards from "../SkillCards";
-
-import {
-  CodeBracketIcon,
-  CircleStackIcon,
-  ServerStackIcon,
-  WrenchScrewdriverIcon,
-  ChartBarIcon,
-} from "@heroicons/react/24/outline";
 import SectionHeader from "../SectionHeader";
 import { EN } from "../../locale/en";
+import {
+  ChartNoAxesCombinedIcon,
+  CodeXmlIcon,
+  DatabaseIcon,
+  ServerIcon,
+  WrenchIcon,
+} from "lucide-react";
 
 const Skills = () => {
   const skillsHeader = [
@@ -23,27 +22,27 @@ const Skills = () => {
 
   const skills = [
     {
-      Icon: CodeBracketIcon,
+      Icon: CodeXmlIcon,
       title: EN.SKILLS_FE.TITLE,
       skills: EN.SKILLS_FE.SKILL_SET,
     },
     {
-      Icon: ServerStackIcon,
+      Icon: ServerIcon,
       title: EN.SKILLS_BE.TITLE,
       skills: EN.SKILLS_BE.SKILL_SET,
     },
     {
-      Icon: ChartBarIcon,
+      Icon: ChartNoAxesCombinedIcon,
       title: EN.SKILLS_DA.TITLE,
       skills: EN.SKILLS_DA.SKILL_SET,
     },
     {
-      Icon: CircleStackIcon,
+      Icon: DatabaseIcon,
       title: EN.SKILLS_DB.TITLE,
       skills: EN.SKILLS_DB.SKILL_SET,
     },
     {
-      Icon: WrenchScrewdriverIcon,
+      Icon: WrenchIcon,
       title: EN.SKILLS_TOOL.TITLE,
       skills: EN.SKILLS_TOOL.SKILL_SET,
     },
@@ -52,7 +51,7 @@ const Skills = () => {
   const softSkills = [
     {
       title: EN.SKILSS_SOFT.TITLE,
-      skills: EN.SKILSS_SOFT.SKILL_SET
+      skills: EN.SKILSS_SOFT.SKILL_SET,
     },
   ];
 
@@ -70,9 +69,8 @@ const Skills = () => {
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-wrap p-4 justify-center xl:justify-start xl:pl-34 gap-8">
             {skills.map((skill, index) => (
-              <RevealOnScroll>
+              <RevealOnScroll key={index}>
                 <SkillCards
-                  key={index}
                   Icon={skill.Icon ? skill.Icon : undefined}
                   title={skill.title}
                   skillLists={skill.skills}

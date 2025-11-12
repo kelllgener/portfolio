@@ -1,4 +1,4 @@
-import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import { InfoIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface AlertProps {
@@ -27,13 +27,13 @@ const Alert = ({ message, duration = 3000, onClose }: AlertProps) => {
 
   return (
     <div
-      className={`fixed flex items-center gap-4 bottom-5 right-2 w-80 bg-gray-100 shadow-lg 
+      className={`fixed flex items-center gap-4 bottom-5 right-4 w-80 bg-gray-100 shadow-lg 
       border-b-4 rounded-lg border-b-green-500 text-black text-center p-3 z-50
       transform transition-all duration-500 ease-in-out
       ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
     >
-      <InformationCircleIcon className="h-5 text-green-500" />
-      <p>{message}</p>
+      <InfoIcon className="h-5 text-green-500" />
+      <p className="text-sm">{message}</p>
     </div>
   );
 };

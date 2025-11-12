@@ -98,8 +98,8 @@ const Projects = () => {
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-wrap p-4 justify-center gap-18">
             {projectData.map((content, index) => (
-              <RevealOnScroll>
-                <ProjectCard key={index} {...content} />
+              <RevealOnScroll key={index}>
+                <ProjectCard {...content} />
               </RevealOnScroll>
             ))}
           </div>

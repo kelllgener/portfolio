@@ -1,15 +1,15 @@
 import React from "react";
 import RevealOnScroll from "../RevealOnScroll";
 import picture2 from "../../assets/images/picture2.jpg";
-import {
-  CodeBracketIcon,
-  BugAntIcon,
-  AcademicCapIcon,
-  LightBulbIcon,
-} from "@heroicons/react/24/outline";
 import KeepsMeGoing from "../KeepsMeGoing";
 import SectionHeader from "../SectionHeader";
 import { EN } from "../../locale/en";
+import {
+  BugIcon,
+  CodeXmlIcon,
+  GraduationCapIcon,
+  LightbulbIcon,
+} from "lucide-react";
 
 const AboutMe = () => {
   const aboutmeHeader = [
@@ -61,22 +61,22 @@ const AboutMe = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-6">
                 <KeepsMeGoing
-                  Icon={CodeBracketIcon}
+                  Icon={CodeXmlIcon}
                   title={EN.ABOUT_SUB_CONTENT_TITLE_1}
                   description={EN.ABOUT_SUB_CONTENT_1}
                 />
                 <KeepsMeGoing
-                  Icon={BugAntIcon}
+                  Icon={BugIcon}
                   title={EN.ABOUT_SUB_CONTENT_TITLE_2}
                   description={EN.ABOUT_SUB_CONTENT_2}
                 />
                 <KeepsMeGoing
-                  Icon={AcademicCapIcon}
+                  Icon={GraduationCapIcon}
                   title={EN.ABOUT_SUB_CONTENT_TITLE_3}
                   description={EN.ABOUT_SUB_CONTENT_3}
                 />
                 <KeepsMeGoing
-                  Icon={LightBulbIcon}
+                  Icon={LightbulbIcon}
                   title={EN.ABOUT_SUB_CONTENT_TITLE_4}
                   description={EN.ABOUT_SUB_CONTENT_4}
                 />

@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import {
-  ArrowDownTrayIcon,
-  CursorArrowRaysIcon,
-} from "@heroicons/react/24/outline";
 
 import RevealOnScroll from "../RevealOnScroll";
 import profile from "../../assets/images/profile.jpg";
 import resume from "../../assets/Gener_Micheal_Adrian_Resume.pdf";
 import Modal from "../Modal";
 import { EN } from "../../locale/en";
+import { ArrowDownToLineIcon, MousePointerClickIcon } from "lucide-react";
 
 interface Props {
   isLoaded: boolean;
-  showAlert: () => void;
+  showAlert: (message?: string) => void;
 }
 
 const Home = ({ isLoaded, showAlert }: Props) => {
@@ -105,18 +102,18 @@ const Home = ({ isLoaded, showAlert }: Props) => {
 
             <div className="flex items-center justify-left gap-4 mt-4">
               <a href="#contact-me" className="btn bg-teal-800 flex flex-row">
-                <CursorArrowRaysIcon className="size-6" /> &nbsp;
+                <MousePointerClickIcon size={20} /> &nbsp;
                 <span>Hire Me</span>
               </a>
               <a
                 href={resume}
                 download
-                onClick={showAlert}
+                onClick={() => showAlert("Resume downloaded successfully.")}
                 target="_blank"
                 className="btn flex flex-row ring-1 text-black hover:text-white hover:bg-black/90 ring-black 
                           dark:text-white dark:hover:text-black dark:hover:bg-white dark:ring-white"
               >
-                <ArrowDownTrayIcon className="size-6" /> &nbsp;
+                <ArrowDownToLineIcon size={20} /> &nbsp;
                 <span>Resume</span>
               </a>
             </div>

@@ -93,7 +93,6 @@ export const EN = {
       "Node,js",
       "Tailwind CSS",
       "Prisma",
-      "Postman",
       "Gemini LLM",
       "GitHub",
       "Vercel",

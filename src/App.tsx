@@ -17,7 +17,7 @@ function App() {
 
   const [alertMessage, setAlertMessage] = useState("");
 
-  const showAlert = () => setAlertMessage("Resume downloaded!");
+  const showAlert = (message?: string) => setAlertMessage(message || "Message here.");
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,7 +65,7 @@ function App() {
         <Experience />
         <Skills />
         <Projects />
-        <ContactMe />
+        <ContactMe showAlert={showAlert} />
       </div>
       <div className="border-t border-t-gray-300">
         <Footer showAlert={showAlert} />

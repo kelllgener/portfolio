@@ -1,9 +1,13 @@
-import { PaperAirplaneIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { EN } from "../locale/en";
+import { LoaderCircle, SendIcon } from "lucide-react";
 
-const EmailForm: React.FC = () => {
+interface EmailFormProps {
+  showAlert: (message?: string) => void;
+}
+
+const EmailForm: React.FC<EmailFormProps> = ({ showAlert }) => {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -15,10 +19,6 @@ const EmailForm: React.FC = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [alertMessage, setAlertMessage] = useState<string | null>(null);
-  const [alertType, setAlertType] = useState<
-    "success" | "error" | "info" | null
-  >(null);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,25 +28,19 @@ const EmailForm: React.FC = () => {
 
     try {
       await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
-      form.current.reset();
-      setAlertMessage("Message Sent Successfully!");
-      setAlertType("success");
+
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+
+      showAlert("Message Sent Successfully!");
     } catch (error) {
       console.error(error);
-      setAlertMessage("Sending Failed, Please try again!");
+      showAlert("Sending Failed, Please try again!");
     } finally {
       setLoading(false);
     }
-
-    setTimeout(() => {
-      setAlertMessage(null);
-      setAlertType(null);
-    }, 10000);
-  };
-
-  const closeAlert = () => {
-    setAlertMessage(null);
-    setAlertType(null);
   };
 
   return (
@@ -63,23 +57,6 @@ const EmailForm: React.FC = () => {
           {EN.CONT_DIV_1_SUB_TITLE}
         </p>
       </div>
-
-      {alertMessage && (
-        <div
-          className={`flex justify-between items-center text-white ring-1 p-2 ${
-            alertType === "success"
-              ? "bg-teal-800 ring-teal-800/50"
-              : alertType === "error"
-              ? "bg-red-500 ring-green-500/50"
-              : "alert-info"
-          } shadow-lg mt-4`}
-        >
-          <span>{alertMessage}</span>
-          <button className="cursor-pointer" onClick={closeAlert}>
-            <XMarkIcon className="h-5" />
-          </button>
-        </div>
-      )}
 
       <form ref={form} onSubmit={sendEmail} className="flex-1/2">
         <div className="flex flex-col w-full md:w-[600px] gap-5">
@@ -134,18 +111,20 @@ const EmailForm: React.FC = () => {
 
           <button
             type="submit"
-            className={`btn flex justify-center items-center bg-teal-800 cursor-pointer ${
-              loading ? "bg-teal-800/50" : ""
-            }`}
+            className={`
+              flex items-center justify-center gap-2 px-4 py-2 text-white text-sm rounded-md shadow-sm shadow-black 
+              bg-teal-800 cursor-pointer hover:bg-teal-900 transition-colors duration-300 ease-in-out 
+                ${loading ? "bg-teal-800/50" : ""}
+              `}
             disabled={loading}
           >
-            <span className={`${loading ? "animate-bounce" : ""}`}>
-              {loading ? "Sending Message..." : "Send Message"}
-            </span>
-            &nbsp;
-            <PaperAirplaneIcon
-              className={`h-5 ${loading ? "animate-bounce" : ""}`}
-            />
+            <span>{loading ? "Sending Message..." : "Send Message"}</span>
+
+            {loading ? (
+              <LoaderCircle size={20} className="animate-spin" />
+            ) : (
+              <SendIcon size={20} />
+            )}
           </button>
         </div>
       </form>

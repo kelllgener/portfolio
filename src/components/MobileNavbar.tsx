@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import MobileNavLink from "./MobileNavLink";
-import {
-  HomeIcon,
-  IdentificationIcon,
-  BriefcaseIcon,
-  FolderOpenIcon,
-  CodeBracketIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline"; 
 import DarkModeToggle from "./DarkModeToggle";
+import { BriefcaseBusinessIcon, CodeXmlIcon, FolderCodeIcon, HouseIcon, IdCardIcon, MailIcon } from "lucide-react";
 
 interface Props {
   menuOpen: boolean;
@@ -60,37 +53,37 @@ const MobileNavbar = ({ menuOpen }: Props) => {
           title="Home"
           href="#home"
           isActive={activeSection === "home"}
-          Icon={HomeIcon}
+          Icon={HouseIcon}
         />
         <MobileNavLink
           title="About Me"
           href="#about-me"
           isActive={activeSection === "about-me"}
-          Icon={IdentificationIcon}
+          Icon={IdCardIcon}
         />
         <MobileNavLink
           title="Experience"
           href="#experience"
           isActive={activeSection === "experience"}
-          Icon={BriefcaseIcon}
+          Icon={BriefcaseBusinessIcon}
         />
         <MobileNavLink
           title="Skills"
           href="#skills"
           isActive={activeSection === "skills"}
-          Icon={CodeBracketIcon}
+          Icon={CodeXmlIcon}
         />
         <MobileNavLink
           title="Projects"
           href="#projects"
           isActive={activeSection === "projects"}
-          Icon={FolderOpenIcon}
+          Icon={FolderCodeIcon}
         />
         <MobileNavLink
           title="Contact Me"
           href="#contact-me"
           isActive={activeSection === "contact-me"}
-          Icon={EnvelopeIcon}
+          Icon={MailIcon}
         />
       </div>
     </div>

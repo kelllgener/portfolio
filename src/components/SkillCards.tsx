@@ -1,4 +1,3 @@
-
 interface CardProps {
   Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
@@ -13,15 +12,32 @@ const SkillCards = ({ Icon, title, skillLists }: CardProps) => {
            backdrop-blur-xl dark:text-white dark:shadow-teal-800/60"
     >
       <div className="flex flex-row gap-4 justify-start items-center mb-8 ">
-        <div className={`ring-1  rounded-xl p-2 bg-white dark:bg-[var(--bg-dark)]
-                         
-          ${title === "Frontend Development" ? "ring-cyan-800-800 text-cyan-800" : ""}
-          ${title === "Backend Development" ? "ring-green-800/50 text-green-800/50" : ""}
-          ${title === "Database Management" ? "ring-indigo-800/50 text-indigo-800/50" : ""}
-          ${title === "Tools & Technologies" ? "ring-orange-800/50 text-orange-800/50" : ""}`}>
-          {Icon && <Icon className="h-6 w-6" />}
+        <div
+          className={`ring-1 rounded-xl p-2 bg-white dark:bg-[var(--bg-dark)]
+          ${
+            title === "Frontend Development"
+              ? "ring-cyan-800-800 text-cyan-800"
+              : ""
+          }
+          ${
+            title === "Backend Development"
+              ? "ring-green-800/50 text-green-800/50"
+              : ""
+          }
+          ${
+            title === "Database Management"
+              ? "ring-indigo-800/50 text-indigo-800/50"
+              : ""
+          }
+          ${
+            title === "Tools & Technologies"
+              ? "ring-orange-800/50 text-orange-800/50"
+              : ""
+          }`}
+        >
+          {Icon && <Icon className="h-5 w-5" />}
         </div>
-        <h1 className="text-xl text-center font-semibold">{title}</h1>
+        <h1 className="text-center font-semibold">{title}</h1>
       </div>
       <div>
         {skillLists?.map((skillList, index) => (
@@ -32,15 +48,30 @@ const SkillCards = ({ Icon, title, skillLists }: CardProps) => {
             <span className="font-medium">{skillList.skill}</span>
             <span
               className={`px-2 py-1 rounded-full text-sm font-medium border transition-colors duration-300
-                ${skillList.level === "Beginner" ? "bg-teal-500 dark:border-black text-white" : ""}
-                ${skillList.level === "Intermediate" ? "bg-teal-600 dark:border-black text-white" : ""}
-                ${skillList.level === "Advanced" ? "bg-teal-700 dark:border-black text-white" : ""}
-                ${skillList.level === "Expert" ? "bg-teal-800 dark:border-black text-white" : ""}
+                ${
+                  skillList.level === "Beginner"
+                    ? "bg-teal-500 dark:border-black text-white"
+                    : ""
+                }
+                ${
+                  skillList.level === "Intermediate"
+                    ? "bg-teal-600 dark:border-black text-white"
+                    : ""
+                }
+                ${
+                  skillList.level === "Advanced"
+                    ? "bg-teal-700 dark:border-black text-white"
+                    : ""
+                }
+                ${
+                  skillList.level === "Expert"
+                    ? "bg-teal-800 dark:border-black text-white"
+                    : ""
+                }
               `}
             >
               {skillList.level}
             </span>
-
           </div>
         ))}
       </div>

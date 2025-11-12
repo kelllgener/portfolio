@@ -1,6 +1,6 @@
 // src/components/DarkModeToggle.jsx
+import { MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);

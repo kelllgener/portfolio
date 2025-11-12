@@ -1,12 +1,4 @@
-import {
-  InformationCircleIcon,
-  BuildingOffice2Icon,
-  CalendarDateRangeIcon,
-  MapPinIcon,
-  ClipboardDocumentCheckIcon,
-  CodeBracketIcon,
-  CheckBadgeIcon
-} from "@heroicons/react/24/outline";
+import { BadgeCheckIcon, Building2Icon, CalendarRangeIcon, CodeXmlIcon, InfoIcon, ListCheckIcon, MapPinIcon } from "lucide-react";
 
 interface TimelineProps {
   company: string;
@@ -33,7 +25,7 @@ const Timeline = ({
     <div className="flex items-start gap-4 relative ">
       {/* Icon */}
       <div className="z-10 flex self-center items-center">
-        <InformationCircleIcon className="size-8 animate-bounce bg-white dark:bg-[var(--bg-dark)] rounded-full text-teal-800 " />
+        <InfoIcon className="size-7 animate-bounce bg-white dark:bg-[var(--bg-dark)] rounded-full text-teal-800 " />
       </div>
 
       {/* Card */}
@@ -41,22 +33,22 @@ const Timeline = ({
            backdrop-blur-xl sm:shadow-md sm:shadow-gray-500/60 dark:text-white dark:shadow-teal-800/60">
         <div className="flex flex-row gap-5 items-center">
           <h3 className="flex items-center gap-2 text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-300">
-            <BuildingOffice2Icon className="h-6 lg:h-7" /> <span>{company}</span>
+            <Building2Icon className="h-6 lg:h-7" /> <span>{company}</span>
           </h3>
           <span className="text-xs px-1 text-gray-500 dark:text-gray-400 ring-1 rounded">
             {type}
           </span>
         </div>
         <h1 className="flex items-center gap-2 text-base md:text-lg lg:text-xl font-semibold text-black dark:text-white">
-          <CheckBadgeIcon className="h-5 lg:h-6" /><span>{position}</span>
+          <BadgeCheckIcon className="h-5 lg:h-6" /><span>{position}</span>
         </h1>
-        <div className="flex flex-col md:flex-row gap-2 md:gap-5 text-sm pl-1 font-semibold text-gray-800 dark:text-gray-300">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-5 text-sm font-semibold text-gray-800 dark:text-gray-300">
           <h3 className="flex flex-row gap-2 items-center">
-            <CalendarDateRangeIcon className="h-4" />
+            <CalendarRangeIcon className="h-5" />
             <span>{duration}</span>
           </h3>
           <h3 className="flex flex-row gap-2 items-center">
-            <MapPinIcon className="h-4" />
+            <MapPinIcon className="h-5" />
             <span>{location}</span>
           </h3>
         </div>
@@ -66,7 +58,7 @@ const Timeline = ({
           </p>
         </div>
         <h3 className="flex flex-row text-base lg:text-lg font-semibold items-center gap-2 mt-1 text-black dark:text-white">
-          <ClipboardDocumentCheckIcon className="h-5 lg:h-6" />
+          <ListCheckIcon className="h-5 lg:h-6" />
           <span> Core Responsibilities </span>
         </h3>
         <div>
@@ -80,7 +72,7 @@ const Timeline = ({
         </div>
         <div>
           <h3 className="flex flex-row text-base lg:text-lg font-semibold items-center gap-2 mt-1 text-black dark:text-white">
-            <CodeBracketIcon className="h-5 lg:h-6" />
+            <CodeXmlIcon className="h-5 lg:h-6" />
             <span>Technologies Used</span>
           </h3>
           <div className="flex flex-wrap gap-2 mt-4">

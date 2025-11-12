@@ -1,5 +1,5 @@
+import { ExternalLinkIcon } from 'lucide-react';
 import { GitHubIcon } from './icons/GitHubIcon';
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 interface Props {
 	projectUrl: string;
@@ -67,7 +67,7 @@ const ProjectCard = ({
 							className="px-4 py-2 flex flex-row flex-1 text-sm justify-center items-center text-white rounded-md shadow-sm shadow-black hover:scale-105 transition duration-300 ease-in-out cursor-pointer bg-teal-800"
 						>
 							<span>View Project </span> &nbsp;
-							<ArrowTopRightOnSquareIcon className="size-5" />
+							<ExternalLinkIcon size={16} />
 						</a>
 						<a
 							href={repoLink}

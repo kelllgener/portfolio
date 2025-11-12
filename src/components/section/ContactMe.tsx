@@ -6,26 +6,25 @@ import { GitHubIcon } from "../icons/GitHubIcon";
 import { LinkedInIcon } from "../icons/LinkedInIcon";
 import { InstagramIcon } from "../icons/InstagramIcon";
 import { FacebookIcon } from "../icons/FacebookIcon";
-
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from "@heroicons/react/24/outline";
 import { EN } from "../../locale/en";
+import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
-const ContactMe = () => {
-  const contactmeHeader = [
+interface ContactMeProps {
+  // Matches the function signature in App.tsx
+  showAlert: (message?: string) => void;
+}
+
+const ContactMe = ({ showAlert }: ContactMeProps) => {  const contactmeHeader = [
     {
       title: EN.CONT_TITLE,
       subTitle: EN.CONT_SUB_TITLE,
-      introduction: EN.CONT_INTRODUCTION
+      introduction: EN.CONT_INTRODUCTION,
     },
   ];
 
   const contactInfo = [
     {
-      icon: EnvelopeIcon,
+      icon: MailIcon,
       contact: "adriangener01@gmail.com",
     },
     { icon: PhoneIcon, contact: "0961-134-798" },
@@ -71,7 +70,7 @@ const ContactMe = () => {
 
         {/* Main Section */}
         <div className="flex flex-col lg:flex-row justify-around gap-4 ">
-          <EmailForm />
+          <EmailForm showAlert={showAlert} />
 
           <div className="flex flex-col gap-10">
             <div
@@ -105,9 +104,8 @@ const ContactMe = () => {
               </p>
               <div className="flex flex-row gap-5">
                 {socialMedia.map((social, index) => (
-                  <TooltipButton tooltip={social.tooltip}>
+                  <TooltipButton key={index} tooltip={social.tooltip}>
                     <a
-                      key={index}
                       href={social.link}
                       target="_blank"
                       className="w-10 h-10 ring-1 flex justify-center items-center rounded-xl ring-gray-800/50 bg-white
