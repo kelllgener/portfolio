@@ -7,6 +7,10 @@ import firstPortfolioUrl from "../../assets/images/first_web_portfolio.png";
 import todamoonAppUrl from "../../assets/images/todamoon_app.png";
 import todamoonWebUrl from "../../assets/images/todamoon_web.png";
 import todamoonScannerUrl from "../../assets/images/todamoon scanner.jpg";
+import todoAppUrl from "../../assets/images/todo_app.png";
+import jobStatusTrackerUrl from "../../assets/images/job_status_tracker.png";
+import GeoAppUrl from "../../assets/images/geo_app.png";
+
 import { EN } from "../../locale/en";
 import TooltipButton from "../TooltipButton";
 import { GitHubIcon } from "../icons/GitHubIcon";
@@ -21,6 +25,46 @@ const Projects = () => {
   ];
 
   const projectData = [
+    {
+      projectUrl: jobStatusTrackerUrl,
+      title: EN.PROJ_STATUS_JOB_TRACKER.TITLE,
+      description: EN.PROJ_STATUS_JOB_TRACKER.DESCRIPTION,
+      demoLink: EN.PROJ_STATUS_JOB_TRACKER.DEMO_LINK,
+      repoLink: EN.PROJ_STATUS_JOB_TRACKER.REPO_LINK,
+      techUsed: EN.PROJ_STATUS_JOB_TRACKER.TECH_USED,
+      yearDev: EN.PROJ_STATUS_JOB_TRACKER.YEAR_DEV,
+      skillFocus: EN.PROJ_STATUS_JOB_TRACKER.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: GeoAppUrl,
+      title: EN.PROJ_GEO_APP_FE.TITLE,
+      description: EN.PROJ_GEO_APP_FE.DESCRIPTION,
+      demoLink: EN.PROJ_GEO_APP_FE.DEMO_LINK,
+      repoLink: EN.PROJ_GEO_APP_FE.REPO_LINK,
+      techUsed: EN.PROJ_GEO_APP_FE.TECH_USED,
+      yearDev: EN.PROJ_GEO_APP_FE.YEAR_DEV,
+      skillFocus: EN.PROJ_GEO_APP_FE.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: GeoAppUrl,
+      title: EN.PROJ_GEO_APP_BE.TITLE,
+      description: EN.PROJ_GEO_APP_BE.DESCRIPTION,
+      demoLink: EN.PROJ_GEO_APP_BE.DEMO_LINK,
+      repoLink: EN.PROJ_GEO_APP_BE.REPO_LINK,
+      techUsed: EN.PROJ_GEO_APP_BE.TECH_USED,
+      yearDev: EN.PROJ_GEO_APP_BE.YEAR_DEV,
+      skillFocus: EN.PROJ_GEO_APP_BE.SKILL_FOCUSED,
+    },
+    {
+      projectUrl: todoAppUrl,
+      title: EN.PROJ_TODO_APP.TITLE,
+      description: EN.PROJ_TODO_APP.DESCRIPTION,
+      demoLink: EN.PROJ_TODO_APP.DEMO_LINK,
+      repoLink: EN.PROJ_TODO_APP.REPO_LINK,
+      techUsed: EN.PROJ_TODO_APP.TECH_USED,
+      yearDev: EN.PROJ_TODO_APP.YEAR_DEV,
+      skillFocus: EN.PROJ_TODO_APP.SKILL_FOCUSED,
+    },
     {
       projectUrl: todamoonScannerUrl,
       title: EN.PROJ_TODAMOON_SCANNER.TITLE,

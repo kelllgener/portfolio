@@ -249,6 +249,55 @@ export const EN = {
     YEAR_DEV: "2024",
     SKILL_FOCUSED: "Backend",
   },
+
+  PROJ_TODO_APP: {
+    TITLE: "Todo-list App",
+    DESCRIPTION:
+      "A todolist-app developed using Laravel and Inertia.",
+    DEMO_LINK: "https://www.youtube.com/watch?v=LgHgmBlc8P0",
+    REPO_LINK:
+      "https://github.com/kelllgener/todo-app",
+    TECH_USED: ["PHP", "Laravel", "Inertia", "tailwind CSS", "MySQL"],
+    YEAR_DEV: "2025",
+    SKILL_FOCUSED: "Fullstack",
+  },
+
+  PROJ_GEO_APP_BE: {
+    TITLE: "Geo-app Backend",
+    DESCRIPTION:
+      "The backend code of geo-app using laravel and RESTful APIs.",
+    DEMO_LINK: "https://www.youtube.com/watch?v=8X7IGaOTeMU",
+    REPO_LINK:
+      "https://github.com/kelllgener/geo-app-backend",
+    TECH_USED: ["PHP", "Laravel", "MySQL"],
+    YEAR_DEV: "2025",
+    SKILL_FOCUSED: "Backend",
+  },
+
+  PROJ_GEO_APP_FE: {
+    TITLE: "Geo-app Frontend",
+    DESCRIPTION:
+      "The frontend code of geo-app using React and tailwind CSS.",
+    DEMO_LINK: "https://www.youtube.com/watch?v=8X7IGaOTeMU",
+    REPO_LINK:
+      "https://github.com/kelllgener/geo-app-frontend",
+    TECH_USED: ["React.js", "tailwind CSS"],
+    YEAR_DEV: "2025",
+    SKILL_FOCUSED: "Frontend",
+  },
+
+  PROJ_STATUS_JOB_TRACKER: {
+    TITLE: "Status Job Tracker",
+    DESCRIPTION:
+      "The simple application to track my job applications.",
+    DEMO_LINK: "https://www.youtube.com/watch?v=JGs7BnW2g2Y",
+    REPO_LINK:
+      "https://github.com/kelllgener/geo-app-frontend",
+    TECH_USED: ["PHP", "Laravel", "React.js", "tailwind CSS", "MySQL"],
+    YEAR_DEV: "2025",
+    SKILL_FOCUSED: "Frontend",
+  },
+
   // GITHUB CONTRIBUTIONS
   PROJ_CONTRIBUTION_TITLE: "GitHub Contributions",
   PROJ_GITHUB_LINK: "https://github.com/kelllgener",
